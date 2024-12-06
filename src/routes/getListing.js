@@ -7,7 +7,7 @@ export const getListingRoute = {
   handler: async (req, h) => {
     const id = req.params.id;
     const { results } = await db.query(
-      'SELECT * FROM listings WHERE ID=?',
+      'SELECT * FROM listings WHERE id=?',
       [id],
     );
 
