@@ -5,7 +5,7 @@ import { db } from "./database";
 // let server;
 
 const start = async () => {
-  let server = Hapi.server({
+  const server = Hapi.server({
     port: 8000,
     host: "localhost",
   });
@@ -14,7 +14,7 @@ const start = async () => {
 
   db.connect();
   await server.start();
-  console.log(`Server is listening on ${server.info.uri}`);
+  console.log(`My Server is listening on ${server.info.uri}`);
 };
 
 process.on("unhandledRejection", (err) => {
